@@ -1,6 +1,5 @@
 const Workout = require('../models/workoutModel')
 const mongoose = require('mongoose')
-const { findByIdAndDelete } = require('../models/workoutModel')
 
 
 // get all workouts
@@ -28,6 +27,7 @@ const getWorkout = async (req, res) => {
 
 // create new workout
 const createWorkout = async (req, res) => {
+    console.log(req.body)
     const {title, load, reps} = req.body
 
     let emptyFields = []
